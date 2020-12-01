@@ -1,0 +1,19 @@
+{
+  "@@locale": "zh",
+  "helloWorld": "繁體你好啊啊啊!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "manageUser": "管理使用者",
+  "@manageUser": {
+    "description": "管理使用者"
+  },
+  "whoIsWatching": "誰在觀賞影片？",
+  "@whoIsWatching": {
+    "description": "A message with a two parameters"
+  },
+  "notification": "通知",
+  "@notification": {
+    "description": "通知"
+  }
+}
