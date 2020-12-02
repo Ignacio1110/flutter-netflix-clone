@@ -17,4 +17,4 @@ https://ithelp.ithome.com.tw/users/20130593/ironman/3677
 
 I wrote the series article of how I build the UI and fetures  I use in this App.
 
-Thank you for watching! Hope this can help the other beginer.
+Thank you for watching! Hope this can help the other beginers.
