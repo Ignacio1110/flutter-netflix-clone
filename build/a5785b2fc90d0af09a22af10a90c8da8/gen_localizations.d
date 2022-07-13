@@ -1,1 +1,0 @@
- /Users/grc/Documents/IgnacioZhang/flutter-netflix-clone/.dart_tool/flutter_gen/gen_l10n/app_localizations_zh.dart /Users/grc/Documents/IgnacioZhang/flutter-netflix-clone/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /Users/grc/Documents/IgnacioZhang/flutter-netflix-clone/l10n.yaml /Users/grc/Documents/IgnacioZhang/flutter-netflix-clone/lib/l10n/app_zh.arb
