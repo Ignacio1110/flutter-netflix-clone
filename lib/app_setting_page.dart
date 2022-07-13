@@ -81,13 +81,13 @@ class _AppSettingPageState extends State<AppSettingPage> {
               ])),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
+          // Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
 
-              )
-            ),
-          ),
+          //     )
+          //   ),
+          // ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

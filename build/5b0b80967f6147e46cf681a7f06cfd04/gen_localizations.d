@@ -1,1 +1,0 @@
- /Users/zhangbinquan/Ignacio-Zhang/flutter_neflix_cover/.dart_tool/flutter_gen/gen_l10n/app_localizations_zh.dart /Users/zhangbinquan/Ignacio-Zhang/flutter_neflix_cover/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /Users/zhangbinquan/Ignacio-Zhang/flutter_neflix_cover/l10n.yaml /Users/zhangbinquan/Ignacio-Zhang/flutter_neflix_cover/lib/l10n/app_zh.arb

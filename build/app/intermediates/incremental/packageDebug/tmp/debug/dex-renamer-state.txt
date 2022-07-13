@@ -1,4 +1,0 @@
-#Tue Dec 01 16:11:27 CST 2020
-base.0=/Users/zhangbinquan/Desktop/未命名檔案夾/文件/flutter_neflix_cover/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

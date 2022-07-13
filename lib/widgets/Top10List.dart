@@ -30,9 +30,9 @@ class _Top10ListState extends State<Top10List> {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: index != 0
                     ? ClipRRect(
-                  borderRadius: BorderRadius.circular(0.0),
-                  child: _buildTop10Item(index),
-                )
+                        borderRadius: BorderRadius.circular(0.0),
+                        child: _buildTop10Item(index),
+                      )
                     : _buildTop10Item(index),
               );
             }),
@@ -46,7 +46,7 @@ class _Top10ListState extends State<Top10List> {
     return SizedBox(
       width: 120,
       child: Stack(
-        overflow: Overflow.visible,
+        // overflow: Overflow.visible,
         children: [
           Align(
             alignment: Alignment.centerRight,
@@ -82,19 +82,19 @@ class _Top10ListState extends State<Top10List> {
                     wordSpacing: 0.0,
                     shadows: [
                       Shadow(
-                        // bottomLeft
+                          // bottomLeft
                           offset: Offset(-1.5, -1.5),
                           color: Colors.white),
                       Shadow(
-                        // bottomRight
+                          // bottomRight
                           offset: Offset(1.5, -1.5),
                           color: Colors.white),
                       Shadow(
-                        // topRight
+                          // topRight
                           offset: Offset(1.5, 1.5),
                           color: Colors.white),
                       Shadow(
-                        // topLeft
+                          // topLeft
                           offset: Offset(-1.5, 1.5),
                           color: Colors.white),
                     ]),

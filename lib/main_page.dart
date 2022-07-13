@@ -40,15 +40,13 @@ class _MainPageState extends State<MainPage> {
         body: pages[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首頁")),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "首頁"),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: "搜尋"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search), title: Text("搜尋")),
+                icon: _buildItemWithNotification(), label: "即將上線"),
             BottomNavigationBarItem(
-                icon: _buildItemWithNotification(), title: Text("即將上線")),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.file_download), title: Text("下載內容")),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.more_vert), title: Text("更多")),
+                icon: Icon(Icons.file_download), label: "下載內容"),
+            BottomNavigationBarItem(icon: Icon(Icons.more_vert), label: "更多"),
           ],
           iconSize: 24.0,
           backgroundColor: Colors.black54,
