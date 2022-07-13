@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_neflix_cover/widgets/MajorRecommendedVideo.dart';
-import 'package:flutter_neflix_cover/widgets/RecommendedMenu.dart';
-import 'package:flutter_neflix_cover/widgets/Top10List.dart';
-import 'package:flutter_neflix_cover/widgets/WonderfulPreview.dart';
+import 'package:flutter_neflix_cover/widgets/major_recommended_video.dart';
+import 'package:flutter_neflix_cover/widgets/recommended_menu.dart';
+import 'package:flutter_neflix_cover/widgets/top_10_list.dart';
+import 'package:flutter_neflix_cover/widgets/wonderful_preview.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 
 import 'model/episode.dart';
@@ -56,9 +56,7 @@ class _SpecificCategoryPageState extends State<SpecificCategoryPage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text("節目"),
-              Hero(
-                  tag: "dash",
-                  child: Text("電影")),
+              Hero(tag: "dash", child: Text("電影")),
               Text("我的片單"),
             ],
           ),

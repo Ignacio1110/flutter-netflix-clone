@@ -7,18 +7,19 @@ import 'package:flutter_neflix_cover/model/episode.dart';
 import 'package:flutter_neflix_cover/model/series_model.dart';
 import 'package:flutter_neflix_cover/series_detial_page.dart';
 import 'package:flutter_neflix_cover/specific_category_page.dart';
-import 'package:flutter_neflix_cover/widgets/MajorRecommendedVideo.dart';
-import 'package:flutter_neflix_cover/widgets/RecommendedMenu.dart';
-import 'package:flutter_neflix_cover/widgets/Top10List.dart';
-import 'package:flutter_neflix_cover/widgets/WonderfulPreview.dart';
+import 'package:flutter_neflix_cover/widgets/major_recommended_video.dart';
+import 'package:flutter_neflix_cover/widgets/recommended_menu.dart';
+import 'package:flutter_neflix_cover/widgets/top_10_list.dart';
+import 'package:flutter_neflix_cover/widgets/wonderful_preview.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
 import 'package:shimmer/shimmer.dart';
 
 enum SearchListType { All, SERIES, VIDEO }
+
 enum SearchListCategory { All, SERIES, VIDEO }
 
 class HomePage extends StatefulWidget {
-  ValueChanged<Series> onTapped;
+  final ValueChanged<Series> onTapped;
 
   HomePage({this.onTapped});
 
@@ -81,13 +82,13 @@ class _HomePageState extends State<HomePage> {
                         },
                         child: Text("節目")),
                     InkWell(
-                        onTap: (){
+                        onTap: () {
                           _type = SearchListType.SERIES;
                           setState(() {});
                         },
                         child: Text("電影")),
                     InkWell(
-                        onTap: (){
+                        onTap: () {
                           _type = SearchListType.SERIES;
                           setState(() {});
                         },
