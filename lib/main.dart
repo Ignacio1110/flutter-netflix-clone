@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -22,6 +21,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: mainNavigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
+        useMaterial3: true,
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Colors.black,
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(
             color: Colors.white,
           ),
-          textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
+          textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.white))),
       home: SplashScreenPage(),
     );
   }

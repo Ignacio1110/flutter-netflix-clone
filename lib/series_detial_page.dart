@@ -6,7 +6,7 @@ import 'package:flutter_neflix_cover/model/episode.dart';
 import 'package:flutter_neflix_cover/model/series_model.dart';
 
 class SeriesDetailPage extends StatefulWidget {
-  Series series;
+  Series? series;
   SeriesDetailPage({this.series});
   @override
   _SeriesDetailPageState createState() => _SeriesDetailPageState();
@@ -15,7 +15,7 @@ class SeriesDetailPage extends StatefulWidget {
 class _SeriesDetailPageState extends State<SeriesDetailPage>
     with SingleTickerProviderStateMixin {
   int selectedIndex = 0;
-  List<Episode> _listEpisodes = List();
+  List<Episode> _listEpisodes = [];
 
   void generateEpisodes() {
     for (int i = 0; i < 26; i++) {
@@ -30,7 +30,7 @@ class _SeriesDetailPageState extends State<SeriesDetailPage>
     }
   }
 
-  TabController _tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
@@ -184,7 +184,7 @@ class _SeriesDetailPageState extends State<SeriesDetailPage>
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset(
-                    data.imageAssetsName,
+                    data.imageAssetsName??"",
                     width: 120,
                     height: 60,
                     fit: BoxFit.cover,
@@ -205,7 +205,7 @@ class _SeriesDetailPageState extends State<SeriesDetailPage>
           ],
         ),
         Text(
-          data.description,
+          data.description??"",
           maxLines: 3,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(fontSize: 12),

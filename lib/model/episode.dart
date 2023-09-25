@@ -11,12 +11,12 @@ class Episode {
       this.imageAssetsName,
       this.duration});
 
-  String name;
-  String description;
-  String duration;
-  String imageURL;
+  String? name;
+  String? description;
+  String? duration;
+  String? imageURL;
   @JsonKey(name: 'image_assets_name')
-  String imageAssetsName;
+  String? imageAssetsName;
 
   factory Episode.fromJson(Map<String, dynamic> json) =>
       _$EpisodeFromJson(json);

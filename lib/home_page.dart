@@ -1,12 +1,8 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_neflix_cover/dialog/DialogSelectCategory.dart';
 import 'package:flutter_neflix_cover/model/episode.dart';
 import 'package:flutter_neflix_cover/model/series_model.dart';
-import 'package:flutter_neflix_cover/series_detial_page.dart';
-import 'package:flutter_neflix_cover/specific_category_page.dart';
 import 'package:flutter_neflix_cover/widgets/major_recommended_video.dart';
 import 'package:flutter_neflix_cover/widgets/recommended_menu.dart';
 import 'package:flutter_neflix_cover/widgets/top_10_list.dart';
@@ -21,16 +17,16 @@ enum SearchListCategory { All, SERIES, VIDEO }
 class HomePage extends StatefulWidget {
   final ValueChanged<Series> onTapped;
 
-  HomePage({this.onTapped});
+  HomePage({required this.onTapped});
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  LinkedScrollControllerGroup _controllers;
-  ScrollController _sliverAppbar;
-  ScrollController _listView;
+  late LinkedScrollControllerGroup _controllers;
+  late ScrollController _sliverAppbar;
+  late ScrollController _listView;
 
   List<Series> _seriesList1 = [
     Series([Episode()], title: ""),
@@ -149,14 +145,14 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
-          textTheme: TextTheme(
-              headline6: TextStyle(color: Colors.white, fontSize: 16.0)),
           leading: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Image.asset(
               "assets/netflix_n.png",
             ),
-          ),
+          ), toolbarTextStyle: TextTheme(
+              titleLarge: TextStyle(color: Colors.white, fontSize: 16.0)).bodyMedium, titleTextStyle: TextTheme(
+              titleLarge: TextStyle(color: Colors.white, fontSize: 16.0)).titleLarge,
         ),
 //        _buildLoading(),
         FutureBuilder(
@@ -192,8 +188,8 @@ class _HomePageState extends State<HomePage> {
     return SliverList(
       delegate: SliverChildListDelegate([
         Shimmer.fromColors(
-          baseColor: Colors.grey[300].withOpacity(0.5),
-          highlightColor: Colors.grey[100].withOpacity(0.5),
+          baseColor: Colors.grey.shade300.withOpacity(0.5),
+          highlightColor: Colors.grey.shade100.withOpacity(0.5),
           direction: ShimmerDirection.ttb,
           child: Column(
             mainAxisSize: MainAxisSize.min,

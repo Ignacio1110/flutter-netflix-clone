@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppSettingPage extends StatefulWidget {
@@ -200,8 +199,8 @@ class _AppSettingPageState extends State<AppSettingPage> {
     );
   }
 
-  _buildListTile(IconData iconData, String title, String subtitle,
-      bool _switchState, Function function) {
+  _buildListTile(IconData iconData, String title, String? subtitle,
+      bool? _switchState, Function? function) {
     print("_buildSwitch $_switchState");
     return Card(
       color: Colors.white.withOpacity(0.2),
@@ -226,7 +225,7 @@ class _AppSettingPageState extends State<AppSettingPage> {
                 value: _switchState,
                 onChanged: (value) {
                   setState(() {
-                    function(value);
+                    function?.call(value);
                   });
                 })
             : null,

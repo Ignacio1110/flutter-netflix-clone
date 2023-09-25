@@ -1,14 +1,13 @@
 # This is a generated file; do not edit or check into version control.
-path_provider_linux=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.7/
-path_provider_windows=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.1.0/
-shared_preferences=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.15/
-shared_preferences_android=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.12/
-shared_preferences_ios=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_ios-2.1.1/
-shared_preferences_linux=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.1.1/
-shared_preferences_macos=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-2.0.4/
-shared_preferences_web=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-2.0.4/
-shared_preferences_windows=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.1.1/
-video_player=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-2.4.5/
-video_player_android=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_android-2.3.7/
-video_player_avfoundation=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_avfoundation-2.3.5/
-video_player_web=/Users/grc/development/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_web-2.0.10/
+path_provider_linux=/Users/ignacio/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/Users/ignacio/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1/
+shared_preferences=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences-2.2.1/
+shared_preferences_android=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.1/
+shared_preferences_foundation=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.3.4/
+shared_preferences_linux=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.3.1/
+shared_preferences_web=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences_web-2.2.1/
+shared_preferences_windows=/Users/ignacio/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.3.1/
+video_player=/Users/ignacio/.pub-cache/hosted/pub.dev/video_player-2.7.2/
+video_player_android=/Users/ignacio/.pub-cache/hosted/pub.dev/video_player_android-2.4.10/
+video_player_avfoundation=/Users/ignacio/.pub-cache/hosted/pub.dev/video_player_avfoundation-2.4.10/
+video_player_web=/Users/ignacio/.pub-cache/hosted/pub.dev/video_player_web-2.1.0/

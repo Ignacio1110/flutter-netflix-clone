@@ -14,7 +14,7 @@ class SelectUserPage extends StatefulWidget {
 
 class _SelectUserPageState extends State<SelectUserPage> {
   Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
-  Future<List<User>> _users;
+  late Future<List<User>> _users;
 
   Future<void> mockNetworkData() async {
     print('future work');
@@ -61,93 +61,95 @@ class _SelectUserPageState extends State<SelectUserPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Offstage(
-                    offstage: !editMode,
-                    child: IconButton(
-                      icon: Icon(Icons.arrow_back),
-                      onPressed: () {
-                        setState(() {
-                          editMode = false;
-                        });
-                      },
-                    )),
-              ),
-              !editMode
-                  ? Image.asset(
-                      "assets/netflix_logo.png",
-                      height: 80,
-                    )
-                  : SizedBox(
-                      height: 80,
-                      child: Center(
-                          child: Builder(builder: (BuildContext context) {
-                        return Text(
-                          AppLocalizations.of(context).manageUser,
-                          style: titleStyle.copyWith(fontSize: 24.0),
-                        );
-                      }))),
-              Align(
-                  alignment: Alignment.centerRight,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
                   child: Offstage(
-                    offstage: editMode,
-                    child: IconButton(
-                      icon: Icon(Icons.mode_edit),
-                      onPressed: () {
-                        setState(() {
-                          editMode = true;
-                        });
-                      },
-                    ),
-                  ))
-            ],
-          ),
-          AnimatedOpacity(
-            duration: Duration(milliseconds: 300),
-            opacity: editMode == true ? 0.0 : 1.0,
-            child: Text(
-              AppLocalizations.of(context).whoIsWatching,
-              style: titleStyle,
+                      offstage: !editMode,
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back),
+                        onPressed: () {
+                          setState(() {
+                            editMode = false;
+                          });
+                        },
+                      )),
+                ),
+                !editMode
+                    ? Image.asset(
+                        "assets/netflix_logo.png",
+                        height: 80,
+                      )
+                    : SizedBox(
+                        height: 80,
+                        child: Center(
+                            child: Builder(builder: (BuildContext context) {
+                          return Text(
+                            AppLocalizations.of(context)!.manageUser,
+                            style: titleStyle.copyWith(fontSize: 24.0),
+                          );
+                        }))),
+                Align(
+                    alignment: Alignment.centerRight,
+                    child: Offstage(
+                      offstage: editMode,
+                      child: IconButton(
+                        icon: Icon(Icons.mode_edit),
+                        onPressed: () {
+                          setState(() {
+                            editMode = true;
+                          });
+                        },
+                      ),
+                    ))
+              ],
             ),
-          ),
-          Center(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.6,
-              child: FutureBuilder<List<User>>(
-                  future: _users,
-                  builder: (context, snapshot) {
-                    print("snapshot: $snapshot");
-                    print('data: ${snapshot.data}');
-                    if (snapshot.connectionState == ConnectionState.done &&
-                        snapshot.data != null) {
+            AnimatedOpacity(
+              duration: Duration(milliseconds: 300),
+              opacity: editMode == true ? 0.0 : 1.0,
+              child: Text(
+                AppLocalizations.of(context)!.whoIsWatching,
+                style: titleStyle,
+              ),
+            ),
+            Center(
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.6,
+                child: FutureBuilder<List<User>>(
+                    future: _users,
+                    builder: (context, snapshot) {
+                      print("snapshot: $snapshot");
+                      print('data: ${snapshot.data}');
+                      if (snapshot.connectionState == ConnectionState.done &&
+                          snapshot.data != null) {
+                        return GridView.count(
+                          shrinkWrap: true,
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 16.0,
+                          mainAxisSpacing: 16.0,
+                          childAspectRatio: 10 / 12,
+                          children: List.generate(snapshot.data!.length,
+                              (index) => _buildUser(snapshot.data![index])),
+                        );
+                      }
                       return GridView.count(
                         shrinkWrap: true,
                         crossAxisCount: 2,
                         crossAxisSpacing: 16.0,
                         mainAxisSpacing: 16.0,
                         childAspectRatio: 10 / 12,
-                        children: List.generate(snapshot.data.length,
-                            (index) => _buildUser(snapshot.data[index])),
+                        children: List.generate(4, (index) => _buildWaiting()),
                       );
-                    }
-                    return GridView.count(
-                      shrinkWrap: true,
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 16.0,
-                      mainAxisSpacing: 16.0,
-                      childAspectRatio: 10 / 12,
-                      children: List.generate(4, (index) => _buildWaiting()),
-                    );
-                  }),
+                    }),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

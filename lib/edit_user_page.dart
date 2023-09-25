@@ -5,7 +5,7 @@ import 'model/user.dart';
 class EditUserPage extends StatefulWidget {
   final User user;
 
-  EditUserPage({this.user});
+  EditUserPage({required this.user});
 
   @override
   _EditUserPageState createState() => _EditUserPageState();
@@ -19,7 +19,7 @@ class _EditUserPageState extends State<EditUserPage> {
   bool _isButtonDisabled = false;
   bool savingState = false;
 
-  TextEditingController _editingController;
+  late TextEditingController _editingController;
 
   var screenSized;
 
@@ -84,11 +84,12 @@ class _EditUserPageState extends State<EditUserPage> {
                       alignment: Alignment.centerRight,
                       child: SizedBox(
                         width: 50,
-                        child: FlatButton(
-                          textColor: saveStyle.color,
-                          disabledTextColor: Colors.grey,
-                          padding: EdgeInsets.zero,
-//                      shape: ,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: saveStyle.color,
+                            disabledForegroundColor: Colors.grey,
+                            padding: EdgeInsets.zero,
+                          ),
                           child: Text(
                             "儲存",
                           ),

@@ -4,16 +4,21 @@ import 'package:json_annotation/json_annotation.dart';
 part 'series_model.g.dart';
 
 @JsonSerializable()
-class Series{
-  Series(this.episodes,{this.title, this.description, this.imageURL, this.imageAssetsName,this.duration});
+class Series {
+  Series(
+    this.episodes, {
+    this.title,
+    this.description,
+    this.imageURL,
+    this.imageAssetsName,
+    this.duration,
+  });
 
-  String title;
-  String description;
-  String duration;
-  String imageURL;
-  String imageAssetsName;
+  String? title;
+  String? description;
+  String? duration;
+  String? imageURL;
+  String? imageAssetsName;
 
   List<Episode> episodes;
-
 }
-

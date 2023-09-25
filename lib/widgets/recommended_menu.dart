@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neflix_cover/model/series_model.dart';
 
-import '../series_detial_page.dart';
 
 class RecommendedMenu extends StatefulWidget {
   final String title;

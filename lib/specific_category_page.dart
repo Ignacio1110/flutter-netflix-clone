@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neflix_cover/widgets/major_recommended_video.dart';
-import 'package:flutter_neflix_cover/widgets/recommended_menu.dart';
 import 'package:flutter_neflix_cover/widgets/top_10_list.dart';
 import 'package:flutter_neflix_cover/widgets/wonderful_preview.dart';
 import 'package:linked_scroll_controller/linked_scroll_controller.dart';
@@ -17,12 +16,12 @@ class _SpecificCategoryPageState extends State<SpecificCategoryPage> {
   GlobalKey<ScaffoldState> _globalKey =
       GlobalKey(debugLabel: "test scaffoldState");
 
-  LinkedScrollControllerGroup _controllers;
-  ScrollController _sliverAppbar;
-  ScrollController _listView;
+  late LinkedScrollControllerGroup _controllers;
+  late ScrollController _sliverAppbar;
+  late ScrollController _listView;
 
-  Series _series1;
-  Series _series2;
+  late Series _series1;
+  late Series _series2;
 
   @override
   void initState() {
@@ -60,14 +59,14 @@ class _SpecificCategoryPageState extends State<SpecificCategoryPage> {
               Text("我的片單"),
             ],
           ),
-          textTheme: TextTheme(
-              headline6: TextStyle(color: Colors.white, fontSize: 16.0)),
           leading: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Image.asset(
               "assets/netflix_n.png",
             ),
-          ),
+          ), toolbarTextStyle: TextTheme(
+              titleLarge: TextStyle(color: Colors.white, fontSize: 16.0)).bodyMedium, titleTextStyle: TextTheme(
+              titleLarge: TextStyle(color: Colors.white, fontSize: 16.0)).titleLarge,
         ),
         SliverList(
             delegate: SliverChildListDelegate([

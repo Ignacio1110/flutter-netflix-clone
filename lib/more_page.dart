@@ -158,16 +158,20 @@ class _MorePageState extends State<MorePage> {
   }
 
   _buildEditButton() {
-    return FlatButton.icon(
-      splashColor: Colors.grey,
-      icon: Icon(
-        Icons.edit,
-        color: labelStyle.color,
-      ),
-      onPressed: () {},
-      label: Text(
-        "管理使用者",
-        style: labelStyle,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(foregroundColor: Colors.black),
+        icon: Icon(
+          Icons.edit,
+        ),
+        onPressed: () {},
+        label: Text(
+          "管理使用者",
+          style: labelStyle.copyWith(
+            color: Colors.black,
+          ),
+        ),
       ),
     );
   }
@@ -206,10 +210,15 @@ class _MorePageState extends State<MorePage> {
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 )),
-                FlatButton(
-                  onPressed: () {},
-                  child: Text("複製連結"),
-                  color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                    ),
+                    onPressed: () {},
+                    child: Text("複製連結"),
+                  ),
                 )
               ],
             ),

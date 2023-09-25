@@ -30,7 +30,7 @@ class _DialogSelectCategoryState extends State<DialogSelectCategory> {
   ];
 
   String selected = "所有類型";
-  List _list;
+  late List _list;
 
   @override
   Widget build(BuildContext context) {

@@ -56,8 +56,11 @@ class _SearchingPageState extends State<SearchingPage> {
                 stream: _getSeries(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
+                    if(snapshot.data ==null){
+                      return const SizedBox();
+                    }
                     return ListView.builder(
-                        itemCount: snapshot.data.length,
+                        itemCount: snapshot.data!.length,
                         itemBuilder: (context, index) {
                           return Row(
                             children: [
@@ -70,14 +73,14 @@ class _SearchingPageState extends State<SearchingPage> {
                                       width: 160,
                                       height: 80,
                                       child: _buildNetworkImage(
-                                          snapshot.data[index])),
+                                          snapshot.data![index])),
                                 ),
                               ),
                               Expanded(
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 8.0),
                                   child: Text(
-                                    "${snapshot.data[index].title}",
+                                    "${snapshot.data![index].title}",
                                     style: TextStyle(
                                         fontSize: 16.0,
                                         color: Colors.white.withOpacity(0.8)),
@@ -124,7 +127,7 @@ class _SearchingPageState extends State<SearchingPage> {
 //    return Image.network(imageURL);
     return FadeInImage.memoryNetwork(
       placeholder: kTransparentImage,
-      image: series.imageURL,
+      image: series.imageURL ?? '',
       fit: BoxFit.cover,
       imageErrorBuilder: (context, error, s) {
         print('something: $error}');

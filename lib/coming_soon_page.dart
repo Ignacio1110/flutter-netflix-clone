@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_neflix_cover/notifications_page.dart';
@@ -67,7 +66,7 @@ class _ComingSoonPageState extends State<ComingSoonPage> {
     );
   }
 
-  T getMeta<T>(double x, double y) {
+  T? getMeta<T>(double x, double y) {
     var renderBox = context.findRenderObject() as RenderBox;
     var offset = renderBox.localToGlobal(Offset(x, y));
 
@@ -108,7 +107,7 @@ class _ComingSoonPageState extends State<ComingSoonPage> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(AppLocalizations.of(context).notification),
+            child: Text(AppLocalizations.of(context)!.notification),
           ),
           Expanded(
             child: SizedBox(),
@@ -257,7 +256,7 @@ class VideoItem extends StatefulWidget {
 }
 
 class _VideoItemState extends State<VideoItem> {
-  VideoPlayerController _controller;
+  late VideoPlayerController _controller;
 
   @override
   void initState() {

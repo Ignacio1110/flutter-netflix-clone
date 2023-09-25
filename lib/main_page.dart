@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neflix_cover/shared_data_widget.dart';
 import 'package:flutter_neflix_cover/coming_soon_page.dart';

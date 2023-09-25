@@ -4,7 +4,7 @@ class SharedDataWidget extends InheritedWidget {
   final int data;
   Widget child;
 
-  SharedDataWidget({this.data, this.child}) : super(child: child);
+  SharedDataWidget({required this.data,required this.child}) : super(child: child);
 
   static of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<SharedDataWidget>();

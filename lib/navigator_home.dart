@@ -9,7 +9,7 @@ class HomeNavigator extends StatefulWidget {
 }
 
 class _HomeNavigatorState extends State<HomeNavigator> {
-  Series _selectedSeries;
+   Series? _selectedSeries;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +21,10 @@ class _HomeNavigatorState extends State<HomeNavigator> {
             child: HomePage(
               onTapped: _handleSeriesTapped,
             )),
-        // New:
-        if (_selectedSeries != null)
-          MaterialPage(
-              key: ValueKey(_selectedSeries),
-              child: SeriesDetailPage(series: _selectedSeries))
+        if(_selectedSeries!=null)
+        MaterialPage(
+            key: ValueKey(_selectedSeries),
+            child: SeriesDetailPage(series: _selectedSeries))
       ],
       onPopPage: (route, result) {
         print("route: $route result: $result");
